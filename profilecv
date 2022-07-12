@@ -1,0 +1,102 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Color(0xff020d1c),
+        appBar: AppBar(
+          title: Text('Profile'),
+          backgroundColor: Color(0xff020d1c),
+          elevation: 0,
+          actions: <Widget>[
+            Padding(padding: const EdgeInsets.only(right: 16.0), child: Icon(Icons.verified_user, color: Colors.red)),
+          ],
+        ),
+        //bagian user
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            
+            Container(
+              padding: EdgeInsets.fromLTRB(5.0, 50.0, 5.0, 4.0),
+              margin: EdgeInsets.fromLTRB(5.0, 2.0, 5.0, 4.0),
+              height: 500,
+              width: double.infinity,
+              child: Card(
+                child: Container(
+                    color: Colors.blueAccent[200],
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(top: 30, right: 20, left: 70, bottom: 15),
+                          child: Text('Curriculum Vitae', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24, color: Colors.black)),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Row(children: <Widget>[
+                            Icon(Icons.person_pin),
+                            Text('Nama       : Aldiansyah Bintang FP', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18))
+                          ]),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Row(children: <Widget>[
+                            Icon(Icons.dialpad),
+                            Text('NIM          : 190103176', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18))
+                          ]),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Row(children: <Widget>[
+                            Icon(Icons.date_range),
+                            Text('TTL          : Klaten 02-06-1999', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18))
+                          ]),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Row(children: <Widget>[
+                            Icon(Icons.contact_mail),
+                            Text('E-mail      : aldipenddol77@gmail.com', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18))
+                          ]),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Row(children: <Widget>[
+                            Icon(Icons.contact_phone),
+                            Text('Telepon   : 081226445989', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18))
+                          ]),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Row(children: <Widget>[
+                            Icon(Icons.home),
+                            Text('Alamat    : Sukoharjo', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18))
+                          ]),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Row(children: <Widget>[
+                            Icon(Icons.dialpad),
+                            Text('Riwayat Pendidikan    : S1 Teknik Informatika', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18))
+                          ]),
+                        ),
+                      ],
+                    )),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
